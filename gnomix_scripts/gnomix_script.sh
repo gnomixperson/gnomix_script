@@ -4,6 +4,7 @@
 source ./greet.sh
 source ./install_script.sh
 source ./prompt_helper.sh
+source ./install_de.sh
 
 name="Patricia"
 
@@ -76,5 +77,19 @@ if [ "$install_signal" = "y" ]; then
 
 
     output_line "Let's install a.... better DE?" 5
-    safe_prompt "choose DE/WM of your choice!" "kde gnome swaywm"
+    safe_prompt "choose DE/WM of your choice!" "kde gnome swaywm" chosen_desktop
+
+    if [ "$chosen_desktop"="kde" ] then
+        install_kde 
+    
+    elif [ "$chosen_desktop"="gnome" ] then
+        install_gnome
+    
+    elif
+    elif [ "$chosen_desktop"="swaywm" ] then
+        install_sway
+    fi
+    if [ ]
+    
+    
 fi
