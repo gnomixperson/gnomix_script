@@ -79,17 +79,31 @@ if [ "$install_signal" = "y" ]; then
     output_line "Let's install a.... better DE?" 5
     safe_prompt "choose DE/WM of your choice!" "kde gnome swaywm" chosen_desktop
 
-    if [ "$chosen_desktop"="kde" ] then
-        install_kde 
-    
-    elif [ "$chosen_desktop"="gnome" ] then
+    if [ "$chosen_desktop" = "kde" ]; then
+        install_kde
+
+    elif [ "$chosen_desktop" = "gnome" ]; then
         install_gnome
-    
-    elif
-    elif [ "$chosen_desktop"="swaywm" ] then
+
+    elif [ "$chosen_desktop" = "budgie" ]; then
+        install_budgie
+
+    elif [ "$chosen_desktop" = "cinnamon" ]; then
+        install_cinnamon
+
+    elif [ "$chosen_desktop" = "lxde" ]; then
+        install_lxde
+
+    elif [ "$chosen_desktop" = "mate" ]; then
+        install_mate
+
+    elif [ "$chosen_desktop" = "swaywm" ]; then
         install_sway
+
+    elif [ "$chosen_desktop" = "xfce" ]; then
+        install_xfce
+
     fi
-    if [ ]
     
     
 fi
